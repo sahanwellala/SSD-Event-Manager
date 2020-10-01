@@ -117,23 +117,24 @@
         url: "http://localhost:8081/api/google/events",
         success: function (result) {
             console.log(result);
-            events = result;
-            result.forEach((event) => {
-                let eventList = document.getElementById('eventList');
-                let panelDiv = document.createElement('div');
-                panelDiv.setAttribute('class', 'panel panel-success');
-                let panelHeading = document.createElement('div');
-                panelHeading.setAttribute('class', 'panel-heading');
+            if (typeof result != 'undefined') {
+                events = result;
+                result.forEach((event) => {
+                    let eventList = document.getElementById('eventList');
+                    let panelDiv = document.createElement('div');
+                    panelDiv.setAttribute('class', 'panel panel-success');
+                    let panelHeading = document.createElement('div');
+                    panelHeading.setAttribute('class', 'panel-heading');
 
-                panelHeading.innerText = event.summary;
+                    panelHeading.innerText = event.summary;
 
-                let panelBody = document.createElement('div');
-                panelBody.setAttribute('class', 'panel-body');
+                    let panelBody = document.createElement('div');
+                    panelBody.setAttribute('class', 'panel-body');
 
-                eventList.appendChild(panelDiv);
-                panelDiv.appendChild(panelHeading);
-                panelHeading.appendChild(panelBody);
-                $(`<table class="table table-stripped">
+                    eventList.appendChild(panelDiv);
+                    panelDiv.appendChild(panelHeading);
+                    panelHeading.appendChild(panelBody);
+                    $(`<table class="table table-stripped">
                         <tbody>
                             <tr>
                                 <td>Description</td>
@@ -149,7 +150,9 @@
                         </tbody>
                         </table>`).appendTo(panelBody);
 
-            });
+                });
+            }
+
         },
         error: function (e) {
 
