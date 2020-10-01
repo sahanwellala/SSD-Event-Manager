@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Event Planner</title>
+    <link rel="icon" href="images/planner.png">
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script>
@@ -34,29 +35,44 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9 col-lg-8 mx-auto">
-                            <h3 class="login-heading mb-4 text-center">Welcome back!</h3>
+                            <h3 class="login-heading mb-4 text-center">Welcome to Event Planner !</h3>
                             <form>
-                                <div class="form-label-group">
-                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-                                           required autofocus>
-                                    <label for="inputEmail">Email address</label>
-                                </div>
+                                <img src="images/planner.png"
+                                     width="200px"
+                                     height="200px"
+                                     class="rounded"
+                                     style="margin: auto;display: block"
+                                     alt="Event Planner"><br/>
+<!--                                <div class="form-label-group">-->
+<!--                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address"-->
+<!--                                           required autofocus>-->
+<!--                                    <label for="inputEmail">Email address</label>-->
+<!--                                </div>-->
 
-                                <div class="form-label-group">
-                                    <input type="password" id="inputPassword" class="form-control"
-                                           placeholder="Password" required>
-                                    <label for="inputPassword">Password</label>
-                                </div>
+<!--                                <div class="form-label-group">-->
+<!--                                    <input type="password" id="inputPassword" class="form-control"-->
+<!--                                           placeholder="Password" required>-->
+<!--                                    <label for="inputPassword">Password</label>-->
+<!--                                </div>-->
 
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Remember password</label>
+<!--                                <div class="custom-control custom-checkbox mb-3">-->
+<!--                                    <input type="checkbox" class="custom-control-input" id="customCheck1">-->
+<!--                                    <label class="custom-control-label" for="customCheck1">Remember password</label>-->
+<!--                                </div>-->
+<!--                                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"-->
+<!--                                        type="submit"-->
+<!--                                        onclick="window.open('https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http://localhost:8081/api/google/grant&prompt=consent&response_type=code&client_id=423813053107-nbsq7u3pq9r93e5hl0ikou46qubs9t5v.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/calendar&access_type=offline')"-->
+<!--                                >Sign in-->
+<!--                                </button>-->
+                                <h6 class="login-heading mb-4 text-center">Please login with Google to continue</h6>
+                                <div class="row">
+                                    <div class="col-md-12"><a
+                                            class="btn btn-lg btn-google btn-block text-uppercase btn-outline"
+                                            href="https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http://localhost:8081/api/google/grant&prompt=consent&response_type=code&client_id=423813053107-nbsq7u3pq9r93e5hl0ikou46qubs9t5v.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/calendar&access_type=offline"><img
+                                            src="https://img.icons8.com/color/20/000000/google-logo.png"> Log in With
+                                        Google</a></div>
                                 </div>
-                                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
-                                        type="submit"
-                                        onclick="window.open('https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http://localhost:8081/api/google/grant&prompt=consent&response_type=code&client_id=423813053107-nbsq7u3pq9r93e5hl0ikou46qubs9t5v.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/calendar&access_type=offline')"
-                                >Sign in
-                                </button>
+                                <br>
 
                                 <div class="text-center">
                                     <a class="small" href="#">Forgot password?</a></div>

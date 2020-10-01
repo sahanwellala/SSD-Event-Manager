@@ -22,6 +22,12 @@ public class CalendarEventController {
     @Autowired
     private CalendarEventService calendarEventService;
 
+    /**
+     * Endpoint to get all the list of calendar events from google calendar.
+     *
+     * @return ResponseEntity<Object>
+     * @throws IOException
+     */
     @GetMapping("/events")
     public ResponseEntity<Object> viewAllEvents() throws IOException {
         List<CalendarEvent> eventList = calendarEventService.viewAllEvents(true);
