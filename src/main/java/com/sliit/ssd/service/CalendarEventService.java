@@ -39,10 +39,11 @@ public class CalendarEventService {
     @Value("${google.listEventUrl}")
     private String listEventUrl;
 
+    // Build a new authorized API client service.
+    //accessTokenDTO.setAccessToken("ya29.a0AfH6SMBZlAaGrBbNhV6EMH40xLzvDa2F-dPfEoIdCvxOcAZ6zBEX6CCg-7jTZL0ph1t2U9vdOk-ow3aT7y7G1yAwgCpn3VdlEwQ6Eig_NZ7uciCe8_o1STLKfLE9ZvD4NajR0N2yGqOYSYebMAqx48p5K_fVmNle0aA");
 
     public List<CalendarEvent> viewAllEvents(boolean isUpcomingEvents) throws IOException {
-        // Build a new authorized API client service.
-        //accessTokenDTO.setAccessToken("ya29.a0AfH6SMBZlAaGrBbNhV6EMH40xLzvDa2F-dPfEoIdCvxOcAZ6zBEX6CCg-7jTZL0ph1t2U9vdOk-ow3aT7y7G1yAwgCpn3VdlEwQ6Eig_NZ7uciCe8_o1STLKfLE9ZvD4NajR0N2yGqOYSYebMAqx48p5K_fVmNle0aA");
+
         GoogleCredential credential = new GoogleCredential().setAccessToken(accessTokenDTO.getAccessToken());
 
         Calendar service = new Calendar.Builder(new NetHttpTransport(), JacksonFactory.getDefaultInstance(), credential)
@@ -94,13 +95,14 @@ public class CalendarEventService {
         } else {
             UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(listEventUrl)
                     .queryParam("timeMin", new DateTime(System.currentTimeMillis()));
-            return restClient.restExchangeWithParams(builder.build().encode().toUri(), accessTokenDTO.getAccessToken(), EventListDTO.class).getBody();
+            return restClient.restExchangeWithParams(builder.build().encode().toUri(), accessTokenDTO.getAccessToken(),
+                    EventListDTO.class).getBody();
         }
 
     }
-
+    //accessTokenDTO.setAccessToken("ya29.a0AfH6SMBZlAaGrBbNhV6EMH40xLzvDa2F-dPfEoIdCvxOcAZ6zBEX6CCg-7jTZL0ph1t2U9vdOk-ow3aT7y7G1yAwgCpn3VdlEwQ6Eig_NZ7uciCe8_o1STLKfLE9ZvD4NajR0N2yGqOYSYebMAqx48p5K_fVmNle0aA");
     public Event addEvent(NewEvent newEvent) throws IOException {
-        //accessTokenDTO.setAccessToken("ya29.a0AfH6SMBZlAaGrBbNhV6EMH40xLzvDa2F-dPfEoIdCvxOcAZ6zBEX6CCg-7jTZL0ph1t2U9vdOk-ow3aT7y7G1yAwgCpn3VdlEwQ6Eig_NZ7uciCe8_o1STLKfLE9ZvD4NajR0N2yGqOYSYebMAqx48p5K_fVmNle0aA");
+
         GoogleCredential credential = new GoogleCredential().setAccessToken(accessTokenDTO.getAccessToken());
 
         Calendar service = new Calendar.Builder(new NetHttpTransport(), JacksonFactory.getDefaultInstance(), credential)

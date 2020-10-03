@@ -49,7 +49,10 @@ public class CalendarEventController {
     }
 
     @PostMapping(value = "/event")
-    public ResponseEntity<Object> addEvent(@Valid @NotNull @RequestParam String summary, @RequestParam String description, @RequestParam String startDate, @RequestParam String endDate, @RequestParam String startTime, @RequestParam String endTime) throws IOException {
+    public ResponseEntity<Object> addEvent(@Valid @NotNull @RequestParam String summary, 
+                                           @RequestParam String description, @RequestParam String startDate,
+                                           @RequestParam String endDate, @RequestParam String startTime,
+                                           @RequestParam String endTime) throws IOException {
         NewEvent newEvent = new NewEvent();
         newEvent.setSummary(summary);
         newEvent.setDescription(description);
