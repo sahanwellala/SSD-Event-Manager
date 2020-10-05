@@ -28,7 +28,7 @@ public class CalendarEventController {
      * @return ResponseEntity<Object>
      * @throws IOException
      */
-    @GetMapping("/events")
+    @GetMapping("/events") // get all events
     public ResponseEntity<Object> viewAllEvents() throws IOException {
         List<CalendarEvent> eventList = calendarEventService.viewAllEvents(true);
         System.out.println(eventList.toString());
@@ -38,7 +38,7 @@ public class CalendarEventController {
         return new ResponseEntity<>(eventList, HttpStatus.OK);
     }
 
-    @GetMapping("/all-events")
+    @GetMapping("/all-events")// get all event include the past event
     public ResponseEntity<Object> viewAllEventsIncludingPastEvents() throws IOException {
         List<CalendarEvent> eventList = calendarEventService.viewAllEvents(false);
 
@@ -48,12 +48,14 @@ public class CalendarEventController {
         return new ResponseEntity<>(eventList, HttpStatus.OK);
     }
 
-    @PostMapping(value = "/event")
+    @PostMapping(value = "/event")// add event to google calander
     public ResponseEntity<Object> addEvent(@Valid @NotNull @RequestParam String summary, 
                                            @RequestParam String description, @RequestParam String startDate,
                                            @RequestParam String endDate, @RequestParam String startTime,
                                            @RequestParam String endTime) throws IOException {
-        NewEvent newEvent = new NewEvent();
+        NewEvent newEvent = new NewEvent();//create event object using NewEvent class
+        
+        // add value for propeties in the object
         newEvent.setSummary(summary);
         newEvent.setDescription(description);
         newEvent.setStartDate(startDate);
@@ -61,6 +63,6 @@ public class CalendarEventController {
         newEvent.setStartTime(startTime);
         newEvent.setEndTime(endTime);
         System.out.println(newEvent.toString());
-        return new ResponseEntity<>(calendarEventService.addEvent(newEvent), HttpStatus.CREATED);
+        return new ResponseEntity<>(calendarEventService.addEvent(newEvent), HttpStatus.CREATED);//call calendar service to update calendar
     }
 }
