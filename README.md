@@ -13,10 +13,19 @@ so we develope web application using java sprng-boot and simple clint using HTML
 
 ## Build And Run the Application
 
-01) Clone the project using following URL
+01) Clone the project using following URL : https://github.com/sahanwellala/SSD-Event-Manager.git
+
 02) import existing project as maven project
-03) Run the project
+
+03) Run the project maven or gradle configuration
 
       ### OR
       
 
+01) Clone the project using following URL : https://github.com/sahanwellala/SSD-Event-Manager.git
+
+02) open Command Prompt
+
+03) Navigate to the project root folder
+
+04) run "mvn spring-boot:run" command
