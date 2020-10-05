@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 
+/**
+ * Service class for the Google Authentication
+ */
 @Service
 public class GoogleAuthService {
 
@@ -38,7 +41,7 @@ public class GoogleAuthService {
 
         // retrieve access_token,token_type,expires_in
         AccessTokenResponseDTO response = restClient.tokenExchange(userAuthorizationUri, request, HttpMethod.POST, AccessTokenResponseDTO.class).getBody();
-        accessTokenDTO.setAccessToken(response.getAccess_token());
+        accessTokenDTO.setAccessToken(response != null ? response.getAccess_token() : null);
         System.out.println(response.getAccess_token());
 
         return response.getToken_type();

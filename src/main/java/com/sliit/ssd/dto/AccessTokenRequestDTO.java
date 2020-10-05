@@ -3,6 +3,9 @@ package com.sliit.ssd.dto;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
+/**
+ * Domain class for Access token request
+ */
 @Component
 @Data
 public class AccessTokenRequestDTO {

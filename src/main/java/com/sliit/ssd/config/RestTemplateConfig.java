@@ -1,3 +1,5 @@
+
+
 package com.sliit.ssd.config;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -7,6 +9,9 @@ import org.springframework.web.client.RestTemplate;
 
 import java.time.Duration;
 
+/**
+ * RestTemplate Configuration
+ */
 @Configuration
 public class RestTemplateConfig {
 

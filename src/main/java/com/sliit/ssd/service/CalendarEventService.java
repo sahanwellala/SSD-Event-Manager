@@ -17,7 +17,6 @@ import com.sliit.ssd.util.RestClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import com.google.api.client.json.jackson2.JacksonFactory;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.io.IOException;
@@ -25,6 +24,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Service class for the Calendar events
+ */
 @Service
 public class CalendarEventService {
     private static final String APPLICATION_NAME = "Event Manager";
@@ -94,7 +96,8 @@ public class CalendarEventService {
         } else {
             UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(listEventUrl)
                     .queryParam("timeMin", new DateTime(System.currentTimeMillis()));
-            return restClient.restExchangeWithParams(builder.build().encode().toUri(), accessTokenDTO.getAccessToken(), EventListDTO.class).getBody();
+            return restClient.restExchangeWithParams(builder.build().encode().toUri(), accessTokenDTO.getAccessToken(),
+                    EventListDTO.class).getBody();
         }
 
     }

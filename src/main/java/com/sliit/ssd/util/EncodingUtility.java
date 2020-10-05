@@ -2,6 +2,9 @@ package com.sliit.ssd.util;
 
 import java.util.Base64;
 
+/**
+ * Util class for general conversions
+ */
 class EncodingUtility {
 
     /**

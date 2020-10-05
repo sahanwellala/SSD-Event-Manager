@@ -1,5 +1,8 @@
 package com.sliit.ssd.constants;
 
+/**
+ * Constants used for the requests
+ */
 public class Constants {
     public final static String AUTHORIZATION_CODE = "authorization_code";
 

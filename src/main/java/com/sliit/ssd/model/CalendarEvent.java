@@ -2,6 +2,9 @@ package com.sliit.ssd.model;
 
 import lombok.Data;
 
+/**
+ * Calendar event model class
+ */
 @Data
 public class CalendarEvent {
     private String id;
