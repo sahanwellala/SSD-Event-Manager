@@ -41,10 +41,10 @@ public class CalendarEventService {
 
 
     public List<CalendarEvent> viewAllEvents(boolean isUpcomingEvents) throws IOException {
-        // Build a new authorized API client service.
-        //accessTokenDTO.setAccessToken("ya29.a0AfH6SMBZlAaGrBbNhV6EMH40xLzvDa2F-dPfEoIdCvxOcAZ6zBEX6CCg-7jTZL0ph1t2U9vdOk-ow3aT7y7G1yAwgCpn3VdlEwQ6Eig_NZ7uciCe8_o1STLKfLE9ZvD4NajR0N2yGqOYSYebMAqx48p5K_fVmNle0aA");
+        // Creating a new credential by setting the access token
         GoogleCredential credential = new GoogleCredential().setAccessToken(accessTokenDTO.getAccessToken());
 
+        // Creating a calendar service with the credential object created
         Calendar service = new Calendar.Builder(new NetHttpTransport(), JacksonFactory.getDefaultInstance(), credential)
                 .setApplicationName(APPLICATION_NAME).build();
 
