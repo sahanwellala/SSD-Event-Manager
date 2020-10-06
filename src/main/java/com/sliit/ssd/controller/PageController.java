@@ -9,6 +9,7 @@ import java.io.IOException;
 
 /**
  * Controller class for page navigation according to request.
+ * Authors: Wellala S. S.(IT17009096) | M. A Ashhar Ahamed (IT17043588)
  *
  */
 @Controller

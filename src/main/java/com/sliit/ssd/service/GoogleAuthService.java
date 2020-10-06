@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * Service class for the Google Authentication
+ * Authors: Wellala S. S.(IT17009096) | M. A Ashhar Ahamed (IT17043588)
  */
 @Service
 public class GoogleAuthService {

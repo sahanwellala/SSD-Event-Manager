@@ -26,6 +26,7 @@ import java.util.List;
 
 /**
  * Service class for the Calendar events
+ * Authors: Wellala S. S.(IT17009096) | M. A Ashhar Ahamed (IT17043588)
  */
 @Service
 public class CalendarEventService {

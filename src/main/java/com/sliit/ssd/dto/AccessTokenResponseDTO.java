@@ -4,6 +4,7 @@ import lombok.Data;
 
 /**
  * Domain class for Access token response
+ * Authors: Wellala S. S.(IT17009096) | M. A Ashhar Ahamed (IT17043588)
  */
 @Data
 public class AccessTokenResponseDTO {

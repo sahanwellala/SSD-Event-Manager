@@ -11,6 +11,8 @@ import java.time.Duration;
 
 /**
  * RestTemplate Configuration
+ *
+ * Authors: Wellala S. S.(IT17009096) | M. A Ashhar Ahamed (IT17043588)
  */
 @Configuration
 public class RestTemplateConfig {

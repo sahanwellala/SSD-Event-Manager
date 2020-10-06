@@ -2,6 +2,7 @@ package com.sliit.ssd.constants;
 
 /**
  * Constants used for the requests
+ * Authors: Wellala S. S.(IT17009096) | M. A Ashhar Ahamed (IT17043588)
  */
 public class Constants {
     public final static String AUTHORIZATION_CODE = "authorization_code";

@@ -28,6 +28,7 @@ public class CalendarEventController {
 
     /**
      * Endpoint to get all the list of calendar events from google calendar.
+     * Authors: Wellala S. S.(IT17009096) | M. A Ashhar Ahamed (IT17043588)
      *
      * @return ResponseEntity<Object>
      * @throws IOException throws IOException
