@@ -17,7 +17,9 @@ so we develope web application using java sprng-boot and simple clint using HTML
 
 02) import existing project as maven project
 
-03) Run the project maven or gradle configuration
+03) Build the project using `mvn clean install`
+
+04) Run using `mvn spring-boot:run`
 
       ### OR
       
@@ -28,4 +30,8 @@ so we develope web application using java sprng-boot and simple clint using HTML
 
 03) Navigate to the project root folder
 
-04) run "mvn spring-boot:run" command
+04) Build the project using `mvn clean install` command
+
+05) Run using `mvn spring-boot:run` command
+
+The Web application is accessible via `http://localhost:8081`. 
